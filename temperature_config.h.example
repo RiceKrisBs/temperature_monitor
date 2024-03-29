@@ -1,0 +1,34 @@
+#ifndef TEMPERATURE_CONFIG_H
+
+#define TEMPERATURE_CONFIG_H
+
+#define WIFI_SSID "xxxxxxxx"
+#define WIFI_PASSWORD "xxxxxxxx"
+
+#define WIFI_HOST_NAME "my-custom-hostname-for-my-device"
+
+// gmail settings
+#define SMTP_HOST "smtp.gmail.com"
+#define SMTP_PORT 465
+#define GMT_OFFSET 4
+#define DAY_LIGHT_OFFSET 0
+#define AUTHOR_EMAIL "xxxxxxxx@gmail.com"
+#define AUTHOR_APP_PASSWORD "xxxxxxxx"
+#define AUTHOR_NAME "John Doe"
+#define EMAIL_SUBJECT "Temperature Reading"
+#define RECIPIENT_EMAIL "example@test.com"
+#define RECIPIENT_NAME "Jane Doe"
+
+// time cutoff settings
+#define EARLY_WINDOW_HOUR 6
+#define EARLY_WINDOW_MINUTE 59
+#define SEND_HOUR 7
+#define SEND_MINUTE 0
+#define LATE_WINDOW_HOUR 7
+#define LATE_WINDOW_MINUTE 1
+
+
+#define DHTPIN D4
+#define DHTTYPE DHT11
+
+#endif
