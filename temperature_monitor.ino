@@ -40,6 +40,11 @@ void setup() {
   Session_Config config = createMailConfig();
   SMTP_Message message = createMailMessage(conditions.temperature, conditions.humidity);
   sendEmail(config, message, testMode);
+
+  int window_duration = (LATE_WINDOW_HOUR - EARLY_WINDOW_HOUR) * 3600 + (LATE_WINDOW_MINUTE - EARLY_WINDOW_MINUTE) * 60;
+  Serial.print("Time to wait before deep sleep: ");
+  Serial.println(window_duration);
+  delay(window_duration * 1000);
   goToDeepSleep();
 }
 
@@ -59,7 +64,7 @@ void connectToWiFi() {
 
   Serial.println("");
   Serial.println("WiFi connected");
-  Serial.println("IP address:");
+  Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
   Serial.println();
 }
